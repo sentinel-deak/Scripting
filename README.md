@@ -19,9 +19,9 @@ scripts I've written, labs I've broken, wargame writeups, and
 notes from the journey. If it helped me learn something, it 
 lives here.
 
+- 📂 **Labs** — Hands-on project work and experiments
 - 📂 **Scripts** — PowerShell and Python as I build them
 - 📂 **Wargames** — UnderTheWire and similar writeups
-- 📂 **Labs** — Hands-on project work and experiments
 
 ## Current Focus
 Network+ — building the networking foundation that cloud 
