@@ -1,0 +1,94 @@
+Cyborg 15
+	- Congrats, you've completed the Cyborg Wargame (intermediate)!
+	COMPLETED:
+
+Cyborg 14 > 15
+	username = cyborg15
+	password =
+	
+	COMPLETED:
+
+Cyborg 13 > 14
+	username = cyborg14
+	password =
+	
+	COMPLETED:
+
+Cyborg 12 > 13
+	username = cyborg13
+	password =
+	
+	COMPLETED:
+
+Cyborg 11 > 12
+	username = cyborg12
+	password =
+	
+	COMPLETED:
+
+Cyborg 10 > 11
+	username = cyborg11
+	password =
+	
+	COMPLETED:
+
+Cyborg 9 > 10
+	username = cyborg10
+	password =
+	
+	COMPLETED:
+
+Cyborg 8 > 9
+	username = cyborg9
+	password =
+	
+	COMPLETED:
+
+Cyborg 7 > 8
+	username = cyborg8
+	password =
+	
+	COMPLETED:
+
+Cyborg 6 > 7
+	username = cyborg7
+	password =
+	
+	COMPLETED:
+	
+Cyborg 5 > 6
+	username = cyborg6
+	password =
+	
+	COMPLETED:
+	
+Cyborg 4 > 5
+	username = cyborg5
+	password =
+	
+	COMPLETED:
+	
+Cyborg 3 > 4
+	username = cyborg4
+	password =
+	
+	COMPLETED:
+	
+Cyborg 2 > 3
+	username = cyborg3
+	password =
+	
+	COMPLETED:
+	
+
+Cyborg 1 > 2
+	username = cyborg2
+	password =
+	
+	COMPLETED:
+	
+Cyborg 0 > 1
+	username = cyborg1
+	password =
+	
+	COMPLETED:

@@ -1,0 +1,140 @@
+Century 15
+	- congrats, you've completed the Century wargame (beginner)!
+	COMPLETED: 20260123
+
+Century 14 > 15
+	username = century15
+	password = 153
+		- The password for Century15 is the number of times the word “polo” appears within the file on the desktop.
+			+ (Select-String -Path "C:\users\century14\desktop\countpolos" -Pattern "\bpolo\b" -AllMatches).Matches.Count   
+	COMPLETED: 20260123
+
+Century 13 > 14
+	username = century14
+	password = 755
+		- The password for Century14 is the number of words within the file on the desktop.
+			+ Get-Content C:\users\century13\desktop\countmywords | Measure-Object -Word
+	COMPLETED: 20260123
+
+Century 12 > 13
+	username = century13
+	password = i_authenticate_things
+		- The password for Century13 is the description of the computer designated as a Domain Controller within this domain PLUS the name of the file on the desktop.
+			+ Get-ADDomainController -Filter * | ForEach-Object { Get-ADComputer -Identity $_.Name -Properties Description } | Select-Object Description
+				> i_authenticate
+			+ dir
+				> _things
+	COMPLETED:20260123
+
+Century 11 > 12
+	username = century12
+	password = secret_sauce
+		- The password for Century12 is the name of the hidden file within the contacts, desktop, documents, downloads, favorites, music, or videos folder in the user’s profile.
+			+ Get-ChildItem -Path Contacts,Desktop,Documents,Downloads,Favorites,Music,Videos -File -Attributes !D+H -Exclude desktop.ini -Recurse -ErrorAction SilentlyContinue
+		- UTW NOTE: exclude "desktop.ini"
+		- UTW NOTE: password will be lowercase regardless of display
+	COMPLETED: 20260123
+
+Century 10 > 11
+	username = century11
+	password = windowsupdates110
+		- The password for Century11 is the 10th and 8th word of the Windows Update service description combined PLUS the name of the file on the desktop.
+			+ 10th = windows
+			+ 8th = updates
+			+ File name = 110
+			+ Get-WMIObject -Class Win32_Service -Filter "Name='wuauserv'" | Select-Object Description
+		- UTW NOTE: password will be lowercase regardless of display
+	COMPLETED: 20260121
+
+Century 9 > 10
+	username = century10
+	password = pierid
+		- The password for Century10 is the 161st word within the file on the desktop.
+			+ ((Get-Content "file.txt" -Raw) -split '\s+' -ne '')[160]
+				> -Raw turn the entire file into a single string
+				> -split '\s+' splits on any whitespace (spaces, tabs, newlines)
+				> -ne '' removes empty entries from array
+				> index begins with 0 so get 161st word would be [160]
+		- UTW NOTE: password will be lowercase regardless of what's displayed
+	COMPLETED: 20260121
+
+Century 8 > 9
+	username = century9
+	password = 696
+		- The password for Century9 is the number of unique entries within the file on the desktop.
+			+ Get-Content "C:\path\to\file.txt" | Sort-Object -Unique | Measure-Object | Select-Object Count
+	COMPLETED: 20260121
+
+Century 7 > 8
+	username = century8
+	password = 7points
+		- The password for Century8 is in a readme file somewhere within the contacts, desktop, documents, downloads, favorites, music, or videos folder in the user’s profile.
+			> Get-ChildItem -Path "C:\Users\$env:USERNAME" -Recurse -Filter "*readme*" -File
+				+ C:\users\century7\Downloads\Readme.txt
+			> Get-Content -Path "C:\users\century7\Downloads\Readme.txt"
+		- UTW NOTE: password will be lowercase no matter how it appears on screen
+	COMPLETED: 20260120
+
+Century 6 > 7
+	username = century7
+	password = 197
+		- The password for Century7 is the number of folders on the desktop.
+			> (Get-ChildItem -Path $PWD.Path -Directory -Recurse | Measure-Object).Count
+	COMPLETED: 20260120
+
+Century 5 > 6
+	username = century6
+	password = underthewire3347
+		- the short name of the domain in which this system resides in PLUS the name of the file on the desktop
+			+ UTW NOTE: If the short name of the domain is “blob” and the file on the desktop is named “1234”, the password would be “blob1234” & password will be lowercase no matter how it appears on the screen.
+			+ domain = underthewire
+				> Get-ADDomain | Select-Object Name
+			+ file on desktop = 3347
+	COMPLETED: 20260120
+
+Century 4 > 5
+	username = century5
+	password = 15768
+		- the name of the file within a directory on the desktop that has spaces in its name
+			+ UTW NOTE = password will be lowercase no matter what the answer is to the above challenge
+			+ Directory on desktop with spaces in name = Can You Open Me > file within = 15768
+		- dir command lists files
+		- Get-ChildItem -Force -Recurse will show all files including hidden and subdirectories
+			+ replace  -Force with -Hidden if you only want hidden files
+	COMPLETED: 20260119
+
+Century 3 > 4
+	username = century4
+	password = 123
+		- number of files on the desktop
+		- (Get-ChildItem -Path "C:\users\centur3\desktop" -File -Recurse | Measure-Object).Count
+			+ replace the folder path above with whatever you want to count
+		- (Get-ChildItem -Path $PWD.Path -File -Recurse | Measure-Object).Count
+			+ counts the current directory you are in
+	COMPLETED: 20260119
+
+Century 2 > 3
+	username = century3
+	password = invoke-webrequest443 (Invoke-WebRequest443 failed due to capitalization)
+		- PowerShell equivalent of the wget function + file name on desktop
+			+ wget in linux let's you retrieve files from the internet using HTTP/HTTPS/FTP/FTPS protocols
+			+ Invoke-WebRequest
+				> can be invoked using the alias wget
+			+ file name on desktop = 443
+	COMPLETED: 20260111
+
+Century 1 > 2
+	username = century2
+	password = 10.0.14393.8688
+		- $PSVersionTable.BuildVersion should be the command to get the correct info
+		- close connection
+		- restart connection with the above info
+		- Successfully connecting will change your prompt to "PS C:\users\century2\desktop>"
+	COMPLETED: 20260111
+	
+Century 0 > 1
+	username = century1
+	password = century1
+		- You will need an SSH client such as Putty. The host that you will be connecting to is century.underthewire.tech, on port 22
+		- You have successfully connected to the game server when your path changes to “PS C:\Users\Century1\desktop>”
+	COMPLETED: 20260111
