@@ -31,7 +31,7 @@ try {
                -Path $OU `
                -DisplayName $DisplayName
 
-    Write-Host "✅ User $Username created successfully!" -ForegroundColor Green
+    Write-Host "User $Username created successfully!" -ForegroundColor Green
 } catch {
-    Write-Host "❌ Error creating user: $($_.Exception.Message)" -ForegroundColor Red
+    Write-Host "ERROR creating user: $($_.Exception.Message)" -ForegroundColor Red
 }   
